@@ -3,41 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar producto</title>
+    <title>Registrar Producto</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../icono.png">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div class="container">
-
         <header class="encabezado">
-            <h1 class="titulo">Proyecto quintos</h1>
-
+            <h1 class="titulo">Proyecto Quintos</h1>
             <nav>
                 <ul>
-                    <li>
-                        <a href="../index.html">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="index.html">Registrar producto</a>
-                    </li>
-                    <li>
-                        <a href="../registrar-venta/index.html">Registrar venta</a>
-                    </li>
-                    <li>
-                        <a href="../factura/index.php">Factura</a>
-                    </li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="index.html" class="activo">Registrar Producto</a></li>
+                    <li><a href="../registrar-venta/index.html">Registrar Venta</a></li>
+                    <li><a href="../factura/index.html">Factura</a></li>
                 </ul>
             </nav>
-
         </header>
 
         <main class="importante">
-            <h2 class="titulo-principal">Registra producto</h2>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam veniam qui officia laborum necessitatibus. Numquam eos fugiat ipsam voluptate nobis quae suscipit illum harum minima pariatur aliquid necessitatibus, beatae possimus!
-            </p>
+            <form action="producto.php" method="post" class="formulario">
+                <h2 class="titulo-principal">Registrar Producto</h2>
+                
+                <fieldset>
+                    <legend>Códigos</legend>
+                    <label>Administrador:
+                        <input type="number" name="codigo_admin" required>
+                    </label>
+                    <label>Producto:
+                        <input type="number" name="codigo_producto" required>
+                    </label>
+                </fieldset>
+
+                <label>Nombre del Producto:
+                    <input type="text" name="nombre_producto" required>
+                </label>
+
+                <label>Cantidad:
+                    <input type="number" name="cantidad" required>
+                </label>
+
+                <fieldset>
+                    <legend>Precios</legend>
+                    <label>Precio de Compra:
+                        <input type="number" step="0.01" name="precio_compra" required>
+                    </label>
+                    <label>Precio de Venta:
+                        <input type="number" step="0.01" name="precio_venta" required>
+                    </label>
+                </fieldset>
+
+                <input type="submit" value="Registrar" class="boton-enviar">
+            </form>
         </main>
+        <footer>&copy; 2024 Proyecto quintos. Todos los derechos reservados.</footer>
     </div>
 </body>
 </html>
