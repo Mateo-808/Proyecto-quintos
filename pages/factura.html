@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <!-- Corrección del cierre del head -->
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Factura</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="../icono.png">
+    <link rel="stylesheet" href="../css/factura.css">
+    <link rel="icon" href="../imgs/icono.png">
+    <script src="../js/factura.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -15,16 +16,16 @@
 
             <nav>
                 <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../registrar-producto/index.html">Registrar Producto</a></li>
-                    <li><a href="../registrar-venta/index.html">Registrar Venta</a></li>
-                    <li><a class="activo" href="index.html">Factura</a></li>
+                    <li><a href="../inicio.html">Inicio</a></li>
+                    <li><a href="product.html">Registrar Producto</a></li>
+                    <li><a href="venta.html">Registrar venta</a></li>
+                    <li><a href="#importante" class="activo">Factura</a></li>
                 </ul>
             </nav>
         </header>
 
         <main class="importante">
-            <form action="factura.php" method="POST">
+            <form action="../php/factura.php" method="POST">
                 <h2 class="titulo-principal">Generar Factura</h2>
                 <fieldset>
                     <legend>Datos del Producto</legend>
@@ -48,7 +49,5 @@
         </main>
         <footer>&copy; 2024 Proyecto quintos. Todos los derechos reservados.</footer>
     </div>
-
-    <script src="script.js" defer></script>
 </body>
 </html>
