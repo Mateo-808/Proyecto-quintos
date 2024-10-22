@@ -57,7 +57,7 @@ nav ul li a:hover {
 
 .activo {
     background-color: #3498db;
-    color: $fff;
+    color: #fff;
 }
 
 .importante {

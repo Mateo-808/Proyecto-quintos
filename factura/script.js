@@ -13,6 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
             inputTotal.value = `$${total}`;
         } else {
             alert("Por favor, ingrese valores válidos.");
-        }
+        }   
     });
 });
